@@ -1,0 +1,13 @@
+- var cards = [{ title: 'Thank you!', copy: 'Thank you so much for being a nice teammate, always support us with a positive energy!'}, { title: 'Wishing!', copy: 'Wishing you all the happiness, joy, and blessings the world can offer on your new journey!'}, { title: 'Fighting!', copy: 'Just dream big. Go for it. There/s nothing holding you back. You can have ups and downs, but if you believe in something, keep the faith; keep fighting. And don/t let people put you down.'}, { title: 'Congratulations!', copy: 'As you worked toward this victory, you behaved with such humility, grace and kindness to others. I appreciate how you always put your effort in our team, and your love for your community is one of the reasons you rise to the top.'}]
+
+
+mixin card(title, copy, button)
+  .card
+    .content
+      h2.title= title
+      p.copy= copy
+      button.btn= button
+
+main.page-content
+  each card in cards
+    +card(card.title, card.copy, card.button)
